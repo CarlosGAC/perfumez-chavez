@@ -1,0 +1,37 @@
+<%= form_for(perfume) do |f| %>
+  <% if perfume.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(perfume.errors.count, "error") %> prohibited this perfume from being saved:</h2>
+
+      <ul>
+      <% perfume.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :buy_price %>
+    <%= f.text_field :buy_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :retail_price %>
+    <%= f.text_field :retail_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stock %>
+    <%= f.number_field :stock %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
