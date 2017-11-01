@@ -1,33 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Perfumes</h1>
+<div class="perfumes-container">
+  <div class="title">
+    <h2>Perfumes</h2>
+    <%= link_to 'Nuevo Perfume', new_perfume_path %>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Buy price</th>
-      <th>Retail price</th>
-      <th>Stock</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="producto-container">
     <% @perfumes.each do |perfume| %>
-      <tr>
-        <td><%= perfume.name %></td>
-        <td><%= perfume.buy_price %></td>
-        <td><%= perfume.retail_price %></td>
-        <td><%= perfume.stock %></td>
-        <td><%= link_to 'Show', perfume %></td>
-        <td><%= link_to 'Edit', edit_perfume_path(perfume) %></td>
-        <td><%= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="producto-iis">
+      <div class="producto-img">
+        <img src="#">
+      </div>
+      <div class="producto-info">
+        <ul>
+          <li>Nombre </li>
+          <li><%= perfume.name %></li>
+        </ul>
+        <ul>
+          <li>Precio de compra </li> <!--buy price-->
+          <li><%= perfume.buy_price %></li>
+        </ul>
+        <ul>
+          <li>Precio  de venta </li> <!--real-->
+          <li><%= perfume.retail_price %></li>
+        </ul>
+        <ul>
+          <li>Stock </li>
+          <li><%= perfume.stock %></li>
+        </ul>
+      </div>
+      <div class="producto-se">
+        <%= link_to 'Mostrar', perfume %>
+        <%= link_to 'Editar', edit_perfume_path(perfume) %>
+        <!-- <%= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Perfume', new_perfume_path %>
+    <!-- <%= link_to 'New Perfume', new_perfume_path %> -->
+  </div>
+</div>

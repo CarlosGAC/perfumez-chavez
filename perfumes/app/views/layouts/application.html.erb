@@ -9,6 +9,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section id="header">
+      <div class="global-logo">
+        <%= link_to 'Logo bien chido', {controller: "welcome"}, id: "logo" %>
+        <!-- <%= link_to(image_tag("i-bg1.jpg", id: "logo", :title => "Home"), "/") %> -->
+        <!-- ,class: "index_logo" -->
+      </div>
+      <div class="menu">
+        <%= link_to "Perfumes", {controller: "perfumes"}%>
+        <%= link_to "Pedidos a Proveedor", {controller: "orders"}%>
+        <%= link_to "Clientes", {controller: "clients"}%>
+        <%= link_to "Cuentas", {controller: "accounts"}%>
+      </div>
+    </section>
+
+
+    <div class="contenedor">
+      <%= yield %>
+    </div>
   </body>
 </html>
