@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<div class="global-container">
+  <div class="show-links">
+    <%= link_to 'Editar', edit_order_path(@order) %>
+    <%= link_to 'Atras', orders_path %>
+  </div>
+</div>

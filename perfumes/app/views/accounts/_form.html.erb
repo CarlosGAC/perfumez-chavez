@@ -10,13 +10,14 @@
       </ul>
     </div>
   <% end %>
+  <div class="form-container">
+    <ul>
+      <li><%= f.label :total %></li>
+      <li><%= f.text_field :total %></li>
+    </ul>
 
-  <div class="field">
-    <%= f.label :total %>
-    <%= f.text_field :total %>
+    <ul>
+      <li><%= f.submit %></li>
+    </ul>
+    <% end %>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

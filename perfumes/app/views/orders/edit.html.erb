@@ -1,6 +1,12 @@
-<h1>Editing Order</h1>
-
-<%= render 'form', order: @order %>
-
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+<div class="global-container">
+  <div class="title t-extra">
+    <h2>Editar Pedido</h2>
+  </div>
+  <div class="new-container">
+    <%= render 'form', order: @order %>
+    <div class="show-links">
+      <%= link_to 'Mostrar', @order %>
+      <%= link_to 'Editar', orders_path %>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Total:</strong>
-  <%= @account.total %>
-</p>
-
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
+<div class="global-container">
+  <div class="show-container">
+    <ul>
+      <li><strong>Total </strong></li>
+      <li><%= @account.total %></li>
+    </ul>
+  </div>
+  <div class="show-links">
+    <li><%= link_to 'Editar', edit_account_path(@account) %></li>
+    <li><%= link_to 'Atras', accounts_path %></li>
+  </div>
+</div>

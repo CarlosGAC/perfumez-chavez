@@ -1,6 +1,12 @@
-<h1>Editing Account</h1>
-
-<%= render 'form', account: @account %>
-
-<%= link_to 'Show', @account %> |
-<%= link_to 'Back', accounts_path %>
+<div class="global-container">
+  <div class="title t-extra">
+    <h2>Editar Cuenta</h2>
+  </div>
+  <div class="new-container">
+    <%= render 'form', account: @account %>
+    <div class="show-links">
+      <li><%= link_to 'Mostrar', @account %></li>
+      <li><%= link_to 'Atras', accounts_path %></li>
+    </div>
+  </div>
+</div>

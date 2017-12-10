@@ -1,6 +1,12 @@
-<h1>Editing Client</h1>
-
-<%= render 'form', client: @client %>
-
-<%= link_to 'Show', @client %> |
-<%= link_to 'Back', clients_path %>
+<div class="global-container">
+  <div class="title t-extra">
+    <h2>Editar Cliente</h2>
+  </div>
+  <div class="new-container">
+    <%= render 'form', client: @client %>
+    <div class="show-links">
+      <%= link_to 'Mostar', @client %>
+      <%= link_to 'Atras', clients_path %>
+    </div>
+  </div>
+</div>

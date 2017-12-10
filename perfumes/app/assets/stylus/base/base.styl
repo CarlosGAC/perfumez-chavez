@@ -36,8 +36,11 @@ p
 .title a
   margin-left: 100px;
 
-#logo
-  background-color: #00000000;
+.t-extra
+  margin-top: 50px;
+
+// #logo
+//   background-color: #00000000;
 
 #notice
   margin: 25px auto;
@@ -53,10 +56,16 @@ p
   min-height:100px;
 
 .global-logo
-  background-color: Khaki;
-  height: 50px;
+  //background-color: Khaki;
+  height: 60px;
   min-width: 100px;
-  margin: 25px 25px 25px 5%;
+  margin: 20px 25px 20px 5%;
+
+.global-logo img
+  height: 60px;
+
+.global-logo a
+  background-color: #00000000;
 
 .menu
   display: flex;
@@ -111,8 +120,7 @@ p
   padding: 25px 20px;
   max-width: 490px;
 
-// Perfumes
-.perfumes-container
+.global-container
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -120,6 +128,7 @@ p
   margin: 0 5%;
   width: 90%;
 
+// Perfumes
 .producto-container
   display: flex;
   flex-direction: row;
@@ -136,6 +145,7 @@ p
   display: flex;
   flex-flow: row wrap;
 
+  margin-bottom: 50px;
   width: 400px;
 
 .producto-img
@@ -159,15 +169,122 @@ p
   margin-top: auto;
   width: 400px;
 
-.producto-se a
-  background-color: #00000000;
-  border: 1px solid $base_black;
-  box-shadow: 2px 2px 10px $base_black;
+// .producto-se a
+//   background-color: #00000000;
+//   border: 1px solid $base_black;
+//   box-shadow: 1px 1px 5px $base_black;
+//   -webkit-transition: all 0.5s ease;
+//   &:hover
+//     color: $base_black;
+//     box-shadow: 2px 5px 10px $base_black;
+
+// about new and forms
+.new-container
+  display: flex;
+  //align-items: center;
+  flex-direction: column;
+
+.form-container
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+
+.form-container ul
+  &:last-child
+    height: 45px;
+
+.li-submit
+  height: 37px;
+
+.li-submit input[type="submit"]
+  font-weight: 600;
+
+// orders
+.pedidos-container
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin: 5px 0;
+  width: 100%;
+
+.pedidos
+  display: flex;
+  flex-direction: column;
+
+.pedidos ul
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  padding-left: 0;
+
+.pedidos li
+  margin-right: 10px;
+
+// Clients & Cuentas
+.clientes-container, .cuentas-container
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin: 5px 0;
+  width: 100%;
+
+
+.clientes-container ul, .cuentas-container ul
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  padding-left: 0;
+
+.clientes-container li, .cuentas-container li
+  font-weight: 400;
+  margin-right: 5px;
+  width: 150px;
+
+.table-ul-1 li
+  font-weight: 600;
+
+.table-ul-2 ul
+  height: 50px;
 
 
 
 
 
+
+
+
+
+
+// NANI!?
+
+
+
+
+// show
+.show-container
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  font-size: 1.5em;
+
+.show-container ul
+  padding-left: 0;
+  margin-right: 100px;
+  min-width: 210px;
+
+.show-links
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+.show-links a
+  margin: 0 10px;
 
 
 

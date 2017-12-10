@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
+<div class="global-container">
+  <div class="show-container">
+    <ul>
+      <li><strong>Nombre </strong></li>
+      <li><%= @perfume.name %></li>
+    </ul>
 
-<p>
-  <strong>Name:</strong>
-  <%= @perfume.name %>
-</p>
+    <ul>
+      <li><strong>Precio de compra </strong></li>
+      <li><%= @perfume.buy_price %></li>
+    </ul>
 
-<p>
-  <strong>Buy price:</strong>
-  <%= @perfume.buy_price %>
-</p>
+    <ul>
+      <li><strong>Precio  de venta </strong></li>
+      <li><%= @perfume.retail_price %></li>
+    </ul>
 
-<p>
-  <strong>Retail price:</strong>
-  <%= @perfume.retail_price %>
-</p>
+    <ul>
+      <li><strong>Stock </strong></li>
+      <li><%= @perfume.stock %></li>
+    </ul>
 
-<p>
-  <strong>Stock:</strong>
-  <%= @perfume.stock %>
-</p>
-
-<%= link_to 'Edit', edit_perfume_path(@perfume) %> |
-<%= link_to 'Back', perfumes_path %>
+  </div>
+  <div class="show-links">
+    <li><%= link_to 'Editar', edit_perfume_path(@perfume) %></li>
+    <li><%= link_to 'Atras', perfumes_path %></li>
+  </div>
+</div>

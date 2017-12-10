@@ -1,37 +1,40 @@
-<%= form_for(perfume) do |f| %>
+  <%= form_for(perfume) do |f| %>
   <% if perfume.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(perfume.errors.count, "error") %> prohibited this perfume from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(perfume.errors.count, "error") %> prohibited this perfume from being saved:</h2>
 
-      <ul>
+    <ul>
       <% perfume.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
+  <div class="form-container">
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
+    <ul>
+      <li><%= f.label :name %></li>
+      <li><%= f.text_field :name %></li>
+    </ul>
 
-  <div class="field">
-    <%= f.label :buy_price %>
-    <%= f.text_field :buy_price %>
-  </div>
+    <ul>
+      <li><%= f.label :buy_price %></li>
+      <li><%= f.text_field :buy_price %></li>
+    </ul>
 
-  <div class="field">
-    <%= f.label :retail_price %>
-    <%= f.text_field :retail_price %>
-  </div>
+    <ul>
+      <li><%= f.label :retail_price %></li>
+      <li><%= f.text_field :retail_price %></li>
+    </ul>
 
-  <div class="field">
-    <%= f.label :stock %>
-    <%= f.number_field :stock %>
-  </div>
+    <ul>
+      <li><%= f.label :stock %></li>
+      <li><%= f.number_field :stock %></li>
+    </ul>
 
-  <div class="actions">
-    <%= f.submit %>
+    <ul>
+      <li class="li-submit"><%= f.submit %></li>
+    </ul>
+    <% end %>
+
   </div>
-<% end %>

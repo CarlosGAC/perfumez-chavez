@@ -1,5 +1,11 @@
-<h1>New Perfume</h1>
-
-<%= render 'form', perfume: @perfume %>
-
-<%= link_to 'Back', perfumes_path %>
+<div class="global-container">
+  <div class="title t-extra">
+    <h2>Nuevo Perfume</h2>
+  </div>
+  <div class="new-container">
+    <%= render 'form', perfume: @perfume %>
+  </div>
+  <div class="show-links">
+    <li><%= link_to 'Atras', perfumes_path %></li>
+  </div>
+</div>

@@ -1,31 +1,32 @@
 <p id="notice"><%= notice %></p>
+<div class="global-container">
+  <div class="title">
+    <h2>Clientes</h2>
+    <%= link_to 'Nuevo Cliente', new_client_path %>
+  </div>
+  <div class="clientes-container">
+    <div class="table-ul-1">
+      <ul>
+        <li>Nombre</li>
+        <li>Direccion</li>
+        <li>Numero de telefono</li>
+        <li> </li>
+        <li> </li>
+        <!-- <li colspan="3"></li> -->
+      </ul>
+    </div>
 
-<h1>Clients</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Phone number</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clients.each do |client| %>
-      <tr>
-        <td><%= client.name %></td>
-        <td><%= client.address %></td>
-        <td><%= client.phone_number %></td>
-        <td><%= link_to 'Show', client %></td>
-        <td><%= link_to 'Edit', edit_client_path(client) %></td>
-        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Client', new_client_path %>
+    <div class="table-ul-2">
+      <% @clients.each do |client| %>
+        <ul>
+          <li><%= client.name %></li>
+          <li><%= client.address %></li>
+          <li><%= client.phone_number %></li>
+          <li class="less-width"><%= link_to 'Mostrar', client %></li>
+          <li class="less-width"><%= link_to 'Editar', edit_client_path(client) %></li>
+          <!-- <li><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></li> -->
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

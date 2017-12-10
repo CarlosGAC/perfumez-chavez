@@ -1,5 +1,11 @@
-<h1>New Order</h1>
-
-<%= render 'form', order: @order %>
-
-<%= link_to 'Back', orders_path %>
+<div class="global-container">
+  <div class="title t-extra">
+    <h2>Nuevo Pedido</h2>
+  </div>
+  <div class="new-container">
+    <%= render 'form', order: @order %>
+  </div>
+  <div class="show-links">
+    <%= link_to 'Atras', orders_path %>
+  </div>
+</div>

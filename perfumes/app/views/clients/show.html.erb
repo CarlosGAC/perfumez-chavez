@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div class="global-container">
+  <div class="show-container">
+    <ul>
+      <li><strong>Nombre </strong></li>
+      <li><%= @client.name %></li>
+    </ul>
 
-<p>
-  <strong>Name:</strong>
-  <%= @client.name %>
-</p>
+    <ul>
+      <li><strong>Direccion </strong></li>
+      <li><%= @client.address %></li>
+    </ul>
 
-<p>
-  <strong>Address:</strong>
-  <%= @client.address %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @client.phone_number %>
-</p>
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+    <ul>
+      <li><strong>Numero de telefono</strong></li>
+      <li><%= @client.phone_number %></li>
+    </ul>
+  </div>
+  <div class="show-links">
+    <li><%= link_to 'Editar', edit_client_path(@client) %></li>
+    <li><%= link_to 'Aras', clients_path %></li>
+  </div>
+</div>
