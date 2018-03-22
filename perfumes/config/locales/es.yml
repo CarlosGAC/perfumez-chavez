@@ -8,6 +8,7 @@ es:
         retail_price: "Precio de venta"
         stock: "Existencias"
         presentation: "Presentacion"
+        
       client:
         phone_number: "El numero de telefono"
         name: "El nombre del cliente"

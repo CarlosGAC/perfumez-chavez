@@ -4,14 +4,14 @@
     <h2>Clientes</h2>
     <%= link_to 'Nuevo Cliente', new_client_path %>
   </div>
-  <div class="">
+  <div class="search-container">
     <%= form_tag(clients_path, method: :get) do %>
+      <ul>
+        <li><%= text_field_tag :name, params[:name], placeholder: "Nombre" %></li>
+        <li><%= text_field_tag :address, params[:address], placeholder: "Dirección" %></li>
 
-      <%= text_field_tag :name, params[:name], placeholder: "Nombre" %>
-      <%= text_field_tag :address, params[:address], placeholder: "Dirección" %>
-
-      <%= submit_tag "Buscar"%>
-
+        <li><%= submit_tag "Buscar"%></li>
+    </ul>
     <%end%>
   </div>
   <div class="clientes-container">

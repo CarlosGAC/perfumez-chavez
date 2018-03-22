@@ -6,15 +6,17 @@
     <%= link_to 'Nuevo Perfume', new_perfume_path %>
   </div>
 
-  <div class="">
+  <div class="search-container">
     <%= form_tag(perfumes_path, method: :get) do %>
-
-      <%= text_field_tag :name, params[:name], placeholder: "Nombre" %>
-      <%= number_field_tag :buy_price, params[:buy_price], placeholder: "Precio de compra", step: 0.5 %>
-      <%= number_field_tag :retail_price, params[:retail_price], placeholder: "Precio de venta", step: 0.5 %>
-      <%= number_field_tag :stock, params[:stock], placeholder: "Stock", step: 1 %>
-      <%= number_field_tag :presentation, params[:presentation], placeholder: "Presentacion" %>
-      <%= submit_tag "Buscar"%>
+      <ul>
+        <li><%= text_field_tag :name, params[:name], placeholder: "Nombre" %></li>
+        <li><%= number_field_tag :buy_price, params[:buy_price], placeholder: "Precio de compra", step: 0.5 %></li>
+        <li><%= number_field_tag :retail_price, params[:retail_price], placeholder: "Precio de venta", step: 0.5 %></li>
+        <li><%= number_field_tag :stock, params[:stock], placeholder: "Stock", step: 1 %></li>
+        <li><%= number_field_tag :presentation, params[:presentation], placeholder: "Presentacion" %></li>
+        <li><%= submit_tag "Buscar"%></li>
+      </ul>
+    </div>
 
     <%end%>
 
