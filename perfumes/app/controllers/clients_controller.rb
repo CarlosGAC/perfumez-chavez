@@ -4,7 +4,18 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
-    @clients = Client.all
+    #@clients = Client.all
+    if params[:address]
+      @clients = Client.where('name LIKE ? AND address LIKE ?', "%#{params[:name]}%", "%#{params[:address]}")
+    else
+      @clients = Client.all
+    end
+    # @q = Client.search(params[:q])
+    # if params[:commit]
+    #   @clients = @q.result
+    # else
+    #   @clients = Client.all
+    # end
   end
 
   # GET /clients/1

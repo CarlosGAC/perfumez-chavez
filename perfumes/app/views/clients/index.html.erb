@@ -4,6 +4,16 @@
     <h2>Clientes</h2>
     <%= link_to 'Nuevo Cliente', new_client_path %>
   </div>
+  <div class="">
+    <%= form_tag(clients_path, method: :get) do %>
+
+      <%= text_field_tag :name, params[:name], placeholder: "Nombre" %>
+      <%= text_field_tag :address, params[:address], placeholder: "Dirección" %>
+
+      <%= submit_tag "Buscar"%>
+
+    <%end%>
+  </div>
   <div class="clientes-container">
     <div class="table-ul-1">
       <ul>
@@ -22,7 +32,7 @@
           <li><%= client.name %></li>
           <li><%= client.address %></li>
           <li><%= client.phone_number %></li>
-          <li class="less-width"><%= link_to 'Mostrar', client %></li>
+          <!--<li class="less-width"><%= link_to 'Mostrar', client %></li>-->
           <li class="less-width"><%= link_to 'Editar', edit_client_path(client) %></li>
           <!-- <li><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></li> -->
         </ul>
