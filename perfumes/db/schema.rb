@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025040827) do
+ActiveRecord::Schema.define(version: 20180322023645) do
 
   create_table "account_details", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -55,8 +55,13 @@ ActiveRecord::Schema.define(version: 20171025040827) do
     t.float    "buy_price"
     t.float    "retail_price"
     t.integer  "stock"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "public_target"
+    t.integer  "classification"
+    t.integer  "category"
+    t.integer  "presentation"
+    t.integer  "visibility"
   end
 
   create_table "schedules", force: :cascade do |t|

@@ -2,12 +2,29 @@
 es:
   activerecord:
     attributes:
+      perfume:
+        name: "Nombre"
+        buy_price: "Precio de compra"
+        retail_price: "Precio de venta"
+        stock: "Existencias"
+        presentation: "Presentacion"
       client:
         phone_number: "El numero de telefono"
         name: "El nombre del cliente"
         address: "La direccion del cliente"
     errors:
       models:
+        perfume:
+          attributes:
+            stock:
+              invalid: " solo aceptan numeros enteros positivos"
+            name:
+              invalid: " solo acepta letras y los símbolos punto y gato"
+              presence: " no puede quedar vacío"
+            buy_price:
+              invalid: " solo acepta numeros enteros o decimales"
+            retail_price:
+              invalid: " solo acepta numeros enteros o decimales"
         client:
           attributes:
             phone_number:

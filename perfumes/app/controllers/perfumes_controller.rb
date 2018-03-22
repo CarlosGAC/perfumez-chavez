@@ -4,7 +4,12 @@ class PerfumesController < ApplicationController
   # GET /perfumes
   # GET /perfumes.json
   def index
-    @perfumes = Perfume.all
+    # @perfumes = Perfume.all
+    if params[:name]
+      @perfumes = Perfume.where('name LIKE ? AND buy_price LIKE ? and retail_price LIKE ? AND stock LIKE ? AND public_target LIKE ? AND classification LIKE ? AND category LIKE ? AND presentation like ? AND visibility LIKE ?', "%#{params[:name]}%", "%#{params[:buy_price]}", "%#{params[:retail_price]}", "%#{params[:stock]}", "%#{params[:public_target]}", "%#{params[:classification]}", "%#{params[:category]}", "%#{params[:presentation]}", "%#{params[:visibility]}")
+    else
+      @perfumes = Perfume.all
+    end
   end
 
   # GET /perfumes/1
@@ -28,7 +33,7 @@ class PerfumesController < ApplicationController
 
     respond_to do |format|
       if @perfume.save
-        format.html { redirect_to @perfume, notice: 'Perfume was successfully created.' }
+        format.html { redirect_to perfumes_url, notice: 'Perfume agregado satisfactoriamente.' }
         format.json { render :show, status: :created, location: @perfume }
       else
         format.html { render :new }
@@ -42,7 +47,7 @@ class PerfumesController < ApplicationController
   def update
     respond_to do |format|
       if @perfume.update(perfume_params)
-        format.html { redirect_to @perfume, notice: 'Perfume was successfully updated.' }
+        format.html { redirect_to perfumes_url, notice: 'Perfume actualizado satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @perfume }
       else
         format.html { render :edit }
@@ -69,6 +74,6 @@ class PerfumesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def perfume_params
-      params.require(:perfume).permit(:name, :buy_price, :retail_price, :stock)
+      params.require(:perfume).permit(:name, :buy_price, :retail_price, :stock, :public_target, :classification, :category, :presentation, :visibility)
     end
 end
